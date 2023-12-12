@@ -1,0 +1,6 @@
+{
+	leak getline
+	Memcheck:Leak 
+	...
+	fun:getline
+}
