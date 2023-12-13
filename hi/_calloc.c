@@ -1,6 +1,6 @@
 #include "simpleshellmain.h"
 /**
- * Description - This function allocates contiguous memory for the
+ * _calloc - This function allocates contiguous memory for the
  * specified number of elements of the specified size and initializes
  * each element to zero. It is intended as a safer alternative to
  * malloc in cases where you want to ensure the memory is cleared before use.

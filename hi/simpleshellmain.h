@@ -51,7 +51,7 @@ char *duplicateString(char *originalString);
 char *_strwchr(char *s, char c);
 char *_strtok(char *stringtobetokenized, char *delimiters);
 
-char *_getenv(char *name, char **envp);
+char *_getenv(char *var_name, char **envp_arr);
 
 char	**_split(char *str, char c);
 void tokenize(char *input, t_token *tokens);
