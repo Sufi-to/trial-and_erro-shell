@@ -4,23 +4,23 @@
  * specified number of elements of the specified size and initializes
  * each element to zero. It is intended as a safer alternative to
  * malloc in cases where you want to ensure the memory is cleared before use.
- * @numOfElements: The number of elements to allocate (size_t).
- * @byteSize: The size in bytes of each element (size_t).
+ * @num_elements: The number of elements to allocate (size_t).
+ * @byte_size: The size in bytes of each element (size_t).
  * Return: A pointer to the allocated memory block, or
  * NULL if the allocation failed.
 */
-void *_calloc(size_t numOfElements, size_t byteSize)
+void *_calloc(size_t num_elements, size_t byte_size)
 {
 	void *ptr;
 
-	if ((numOfElements >= SIZE_MAX && byteSize > 1)
-	|| (numOfElements > 1 && byteSize > SIZE_MAX))
+	if ((num_elements >= SIZE_MAX && byte_size > 1)
+	|| (num_elements > 1 && byte_size > SIZE_MAX))
 		return (NULL);
-	if (!numOfElements || !byteSize)
-		return (malloc(numOfElements * byteSize));
-	ptr = malloc(numOfElements * byteSize);
+	if (!num_elements || !byte_size)
+		return (malloc(num_elements * byte_size));
+	ptr = malloc(num_elements * byte_size);
 	if (!ptr)
 		return (NULL);
-	_bzero(ptr, byteSize * numOfElements);
+	_bzero(ptr, byte_size * num_elements);
 	return (ptr);
 }

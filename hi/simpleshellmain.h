@@ -60,7 +60,7 @@ void	arr_clean(char **av);
 char    **dup_arr(char **arr);
 
 char	*_strjoin(char *s1, char *s2);
-void *_calloc(size_t numOfElements, size_t byteSize);
+void *_calloc(size_t num_elements, size_t byte_size);
 void _bzero(void *memo_pointer, size_t n_bytes);
 void	*_memset(void *s, int c, size_t n);
 size_t	_strlen(const char *s);
