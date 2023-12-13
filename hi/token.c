@@ -60,7 +60,7 @@ char **dup_arr(char **arr)
     if (!arr || !*arr) {
         return (NULL);
     }
-    res = malloc(sizeof(char *) * (arrlen(arr)));
+    res = malloc(sizeof(char *) * (arrlen(arr) + 1));
     if (!res)
         return NULL;
     while (arr && arr[i])
@@ -68,6 +68,7 @@ char **dup_arr(char **arr)
         res[i] = duplicateString(arr[i]);
         i++;
     }
+    res[i] = NULL;
     return (res);
 }
 

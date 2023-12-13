@@ -17,6 +17,12 @@ char *get_executable_path(char *filename, char **envp)
     char *path, *full_path, **path_array;
     int j;
 
+    if (strchr(filename, '/')) 
+    {
+        if (access(filename, F_OK) == 0)
+            return (duplicateString(filename));
+        return (NULL);
+    }
     path = _getenv("PATH=", envp);
     path_array = _split(path, ':');
     void_free(path);
