@@ -55,12 +55,8 @@ int main (int ac, char **av, char **envp)
 			return (printStringAndNewLineToFD("exit", 2), 1);
 		}
 			
-		/** if (line[0] == '\0')
-		// {
-		// 	free(line);
-		// 	return (printStringAndNewLineToFD("exit", 2), 1);
-		 } */
-			
+		if (line[0] == '\0')
+			return (free(line), 1);
 		input = trimString(line, "    \n");
 		free(line);
 		tokenize(input, &token);
